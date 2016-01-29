@@ -14,8 +14,10 @@
 </div>
 <div class=" row">
 <div class=" input-field col s12 m6">
-<?php echo form_dropdown("months",$months,set_value('months',$before->months));?>
+<?php //echo form_dropdown("months",$months,set_value('months',$before->months));?>
 <label for="months">months</label>
+<input type="text" id="months" name="months" value='<?php echo set_value('months',$before->months);?>'>
+
 </div>
 </div>
 <div class="row">
@@ -45,7 +47,9 @@
 <div class="row">
 <div class="col s12 m6">
 <label>description</label>
-<textarea name="description" placeholder="Enter text ..."><?php echo set_value( 'description',$before->description);?></textarea>
+<textarea id="some-textarea" name="description" placeholder="Enter text ...">
+    <?php echo set_value( 'description',$before->description);?>
+</textarea>
 </div>
 </div>
 <div class="row">

@@ -11,8 +11,10 @@
 </div>
 <div class=" row">
 <div class=" input-field col s6">
-<?php echo form_dropdown("months",$months,set_value('months'));?>
+<!-- <?php //echo form_dropdown("months",$months,set_value('months'));?> -->
+
 <label>months</label>
+<input type="text" id="months" name="months" value='<?php echo set_value('months');?>'>
 </div>
 </div>
 <div class="row">
@@ -24,6 +26,13 @@
 <div class=" row">
 <div class=" input-field col s6">
 <?php echo form_dropdown("plan",$plan,set_value('plan'));?>
+<!-- <select class="chzn-select form-control" name="plan">
+  <option value="silver">Silver</option>
+  <option value="gold">Gold</option>
+  <option value="platinum">Platinum</option>
+  <option value="diamond">Diamond</option>
+
+</select> -->
 <label>plan</label>
 </div>
 </div>
@@ -40,11 +49,13 @@
 </div>
 </div>
 <div class="row">
-<div class="input-field col s12">
-<textarea name="description" class="materialize-textarea" length="400"><?php echo set_value( 'description');?></textarea>
-<label>description</label>
-</div>
-</div>
+           <div class="col s12 m6">
+               <label>Description</label>
+               <textarea id="some-textarea" name="description" placeholder="Enter text ...">
+                   <?php echo set_value('description');?>
+               </textarea>
+           </div>
+       </div>
 <div class="row">
 <div class="input-field col s6">
 <label for="title">title</label>

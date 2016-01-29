@@ -43,12 +43,12 @@ return $query;
 }
 public function getimagebyid($id)
 {
-$query=$this->db->query("SELECT `image` FROM `selftables_healthpackages` WHERE `id`='$id'")->row();
-return $query;
+// $query=$this->db->query("SELECT `image` FROM `selftables_healthpackages` WHERE `id`='$id'")->row();
+// return $query;
 }
 public function getdropdown()
 {
-$query=$this->db->query("SELECT * FROM `selftables_healthpackages` ORDER BY `id` 
+$query=$this->db->query("SELECT * FROM `selftables_healthpackages` ORDER BY `id`
                     ASC")->row();
 $return=array(
 "" => "Select Option"
@@ -59,5 +59,18 @@ $return[$row->id]=$row->name;
 }
 return $return;
 }
+
+public function getplanrdropdown()
+{
+$status= array(
+   "" => "Choose Plan",
+   "1" => "Silver",
+   "2" => "Gold",
+   "3" => "Platinum",
+   "4" => "Diamond"
+  );
+return $status;
+}
+
 }
 ?>
